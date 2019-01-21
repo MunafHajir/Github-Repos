@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size:20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.box-container {
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  text-align: center;
+}
+.box-container .box {
+  margin-bottom: 30px;
+  display: inline-block;
+  position: relative;
+}
+.box-container .box input {
+  padding: 5px 10px;
+  height: 45px;
+  font-size: 1em;
+  line-height: 45px;
+  border: 2px solid #ccc;
+  width: 400px;
+  outline: none;
+  background: #fff;
+  color: #a2a5a7;
+}
+.box-container .box input:focus + span {
+  width: 100%;
+  opacity: 1;
+  transform: translateX(0);
+}
+.box-container .box input:focus + span:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.box-container .box input:focus + span:after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.box-container .box input + span {
+  font-family: 'Poppins';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: 2px solid #0099ef;
+  border-right: 2px solid #0099ef;
+  width: calc(100% + 100px);
+  transform: translateX(-50px);
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition-property: opacity, width;
+  transition: .3s ease-out;
+}
+.box-container .box input + span:before, .box-container .box input + span:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 25px;
+  transition-property: top, bottom;
+  transition: .3s ease-out;
+  height: 2px;
+  width: calc(100% - 50px);
+  background: #0099ef;
+}
+.box-container .box input + span:before {
+  top: -30px;
+}
+.box-container .box input + span:after {
+  bottom: -30px;
+}
+
+.button{
+  border:none;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s 
+}
+.btnBlueGreen {
+  
+  font-family: 'Poppins';
+  color: #fff;
+  background: #00AE68;
+}
+.btnBlueGreen.btnPush {
+  box-shadow: 0px 5px 0px 0px #007144;
+}
+.btnPush:hover {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.repos{
+  font-family: 'Poppins';
+  font-size: 20px;
+  color: #007144;
+}
